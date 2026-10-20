@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-mist font-sans text-ink antialiased; }
+  :focus-visible { outline: 2px solid #F0A830; outline-offset: 2px; }
+}
+
+@layer components {
+  .btn { @apply inline-flex items-center justify-center rounded-sm px-4 py-2 text-sm font-medium transition disabled:opacity-50; }
+  .btn-primary { @apply btn bg-sea text-white hover:bg-ink; }
+  .btn-ghost { @apply btn border border-ink/20 bg-white text-ink hover:border-sea hover:text-sea; }
+  .btn-danger { @apply btn border border-red-300 bg-white text-red-700 hover:bg-red-50; }
+  .input { @apply w-full rounded-sm border border-ink/20 bg-white px-3 py-2 text-sm text-ink placeholder:text-ink/40; }
+  .label { @apply mb-1 block text-sm font-medium text-ink/80; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
